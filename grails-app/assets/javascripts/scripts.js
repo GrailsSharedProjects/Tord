@@ -56,18 +56,18 @@
             }
         };
 	
-//	if($('#registration').length == 0) {
-//		var fixmenu = new Headhesive('.navigation-header', options); // init
-//	}
+	if($('#registration').length == 0) {
+		var fixmenu = new Headhesive('.navigation-header', options); // init
+	}
 	
-    // Navigation Scroll
-//    $('.navigation-bar').onePageNav({
-//        currentClass: 'active',
-//        changeHash: true,
-//        scrollSpeed: 750,
-//        scrollThreshold: 0.5,
-//        easing: 'swing'
-//    });
+//     Navigation Scroll
+    $('.navigation-bar').onePageNav({
+        currentClass: 'active',
+        changeHash: true,
+        scrollSpeed: 750,
+        scrollThreshold: 0.5,
+        easing: 'swing'
+    });
     
     // Animated Appear Element
 	if (app.el['window'].width() > 1024){

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta name="layout" content="main"/>
     <title>INDEX</title>
@@ -8,9 +8,7 @@
 
 <body>
 
-<!-- show views -->
-<div id="content">
-	<div id="intro" class="static-header light clearfix">
+<div id="intro" class="static-header light clearfix">
     <div class="text-heading">
         <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">A flexible Open Source </h1>
 
@@ -303,9 +301,6 @@
         </div>
     </div>
 </section>
-
-
-</div><!-- content -->
 
 </body>
 </html>

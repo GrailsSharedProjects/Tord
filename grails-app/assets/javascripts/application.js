@@ -5,7 +5,6 @@
 // You're free to add application-wide JavaScript to this file, but it's generally better 
 // to create separate JavaScript files as needed.
 //
-//= require jquery
 //= require bootstrap.min
 //= require jquery.flexslider-min
 //= require jquery.nav
@@ -18,7 +17,6 @@
 //= require headhesive.min
 //= require toastr.min
 //= require scripts
-//= require_tree .
 //= require_self
 
 if (typeof jQuery !== 'undefined') {

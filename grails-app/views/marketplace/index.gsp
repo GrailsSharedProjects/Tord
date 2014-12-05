@@ -1,100 +1,13 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 <head>
-
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>HumHub - A flexible Open Source Social Network Kit for Social Enterprise Platforms, Social Intranets and other Social Collaboration</title>
-    <meta name="description" content="HumHub is a free social network software and framework built to give you the tools to make teamwork easy and successful.">
-    <meta name="keywords" content="Sociale Network, Social Intranet, Social Collaboration, Social Enterprise, Social Business, Social Software, Open Source">
-    <meta property="og:locale" content="en_EN">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="HumHub - A flexible Open Source Social Network Kit">
-    <meta property="og:description" content="HumHub is a free social network software and framework built to give you the tools to make teamwork easy and successful.">
-    <meta property="og:url" content="http://www.humhub.org">
-    <meta property="og:site_name" content="HumHub">
-    <meta property="article:publisher" content="https://www.facebook.com/thehumhub">
-    <meta property="og:image" content="/img/humhub_screen.jpg">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.jpg">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.jpg">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.jpg">
-    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/font-lineicons.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/animate.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/toastr.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
-
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="/js/jquery-1.11.0.min.js?ver=1"></script>
-    <![endif]-->
-    <!--[if (gte IE 9) | (!IE)]><!-->
-    <script type="text/javascript" src="/js/jquery-2.1.0.min.js?ver=1"></script>
-    <!--<![endif]-->
-
-    <!--[if lt IE 9]>
-    <script src="/js/html5.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
+    <meta name="layout" content="main"/>
+    <title>MARKETPLACE</title>
 </head>
 
-
-<body id="landing-page" style="margin-top: 60px;">
-
-
-<!-- Preloader -->
-
-<header>
-
-    <nav class="navigation navigation-header fixmenu-clone fixmenu-stick">
-        <div class="container">
-            <div class="navigation-brand">
-                <div class="brand-logo">
-                    <a href="http://www.humhub.org/" class="logo"></a>
-                    <span class="sr-only">HumHub</span>
-                </div>
-                <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navigation-navbar">
-                <ul class="navigation-bar navigation-bar-left">
-                    <li><a href="http://www.humhub.org/#intro">Home</a></li>
-                    <li><a href="http://www.humhub.org/#about">About</a></li>
-                    <li><a href="http://www.humhub.org/#features-list">Features</a></li>
-                    <li><a href="/marketplace">Marketplace</a></li>
-                    <li class="dropdown hidden-sm">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="https://github.com/humhub/humhub/blob/master/protected/docs/guide/developer/index.md"
-                                   target="_blank"><i class="fa fa-code"></i>  Documentation</a></li>
-                            <li><a href="https://github.com/humhub/humhub/commits/master" target="_blank"><i class="fa fa-bullhorn"></i> Latest updates</a>
-                            </li>
-                            <li><a href="https://github.com/humhub/humhub/issues/new" target="_blank"><i class="fa fa-bug"></i>Report a bug</a></li>
-                            <li class="divider"></li>
-                            <li><a href="http://community.humhub.com/"><i class="fa fa-life-ring"></i> Get support</a></li>
-                        </ul>
-                    </li>
-                </ul>
-              <ul class="navigation-bar navigation-bar-right">
-
-                    <li class="featured"><a href="/service/form" data-toggle="modal" data-target="#globalModal">Professional Services</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<!-- show views -->
-<div id="content">
-	<section id="marketplace-header" class="long-block light">
+<body>
+<section id="marketplace-header" class="long-block light">
     <div class="container center">
         <div class="col-sm-12">
             <article class="text-center">
@@ -109,7 +22,6 @@
 
     </div>
 </section>
-
 
 <div class="container">
     <div class="row">
@@ -269,10 +181,6 @@
             </article>
         </div>
 
-
-
-
-
         <div class="col-sm-3">
             <div class="sidebar-panel">
                 <h3>Distribute your modules.</h3>
@@ -293,82 +201,6 @@
 
     </div>
 </div>
-
-
-</div><!-- content -->
-
-
-
-
-<footer id="footer" class="footer light">
-    <div class="container">
-        <div class="footer-content row">
-            <div class="col-sm-5">
-                <div class="logo-wrapper">
-                    <img src="/img/logo-white.png" alt="logo" />
-                </div>
-                <p>HumHub is a free social network software and framework built to give you the tools to make teamwork easy and successful.</p>
-            </div>
-            <div class="col-sm-2"></div>
-            <!--<div class="col-sm-5"></div>-->
-            <div class="col-sm-5 social-wrap">
-                <div class="footer-title">Get social with us</div>
-                <ul class="list-inline socials">
-                    <li><a href="https://www.facebook.com/thehumhub" target="_blank"><span class="icon icon-socialmedia-08"></span></a></li>
-                    <li><a href="https://plus.google.com/100976732881794810179" rel="publisher" target="_blank"><span class="icon icon-socialmedia-16"></span></a></li>
-                    <li><a href="https://www.twitter.com/humhub" target="_blank"><span class="icon icon-socialmedia-07"></span></a></li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="copyright">
-            &copy; 2014 HumHub. All rights reserved.
-            <a href="/site/imprint" target="_self">Imprint</a> -
-            <a href="/site/policy" target="_self">Privacy Policy</a> -
-            <a href="/press" target="_self">Press</a> -
-            <a href="mailto:info@humhub.org" target="_self">Contact</a>
-        </div>
-    </div>
-</footer>
-
-<div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
-
-<!-- start: Modal (every lightbox will/should use this construct to show content)-->
-<div class="modal" id="globalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="loader"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end: Modal -->
-
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="/js/jquery.nav.js"></script>
-<script type="text/javascript" src="/js/jquery.appear.js"></script>
-<script type="text/javascript" src="/js/jquery.plugin.js"></script>
-<script type="text/javascript" src="/js/jquery.countdown.js"></script>
-<script type="text/javascript" src="/js/waypoints.min.js"></script>
-<script type="text/javascript" src="/js/waypoints-sticky.min.js"></script>
-<script type="text/javascript" src="/js/jquery.validate.js"></script>
-<script type="text/javascript" src="/js/toastr.min.js"></script>
-<script type="text/javascript" src="/js/headhesive.min.js"></script>
-<!--<script type="text/javascript" src="/mailchimp/js/mailing-list.js"></script>-->
-<script type="text/javascript" src="/js/scripts.js"></script>
-
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-48694556-1', 'auto');
-    ga('send', 'pageview');
-
-</script>
 
 </body>
 </html>

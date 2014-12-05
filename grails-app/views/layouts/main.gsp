@@ -18,30 +18,35 @@
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.jpg')}"/>
 		<link rel="apple-touch-icon" sizes="72x72" href="${assetPath(src: 'apple-touch-icon-72x72.jpg')}"/>
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-114x114.jpg')}"/>
-		
 	  	<asset:stylesheet src="application.css"/>
 		<asset:stylesheet src="font-awesome.min.css"/>
-		
 		<!--[if IE 7]>
-		<link
 		<asset:stylesheet src="font-awesome-ie7.min.css"/>
 		<![endif]-->
 		
+		<script src="${assetPath(src: 'jquery.js')}" ></script>		
 	    <!--[if lt IE 9]>
 	    <script src="${assetPath(src:'html5.js')}"></script>
 	    <script src="${assetPath(src:'respond.min.js')}"></script>
 	    <![endif]-->
+	    
 		<g:layoutHead/>
 	</head>
-	<body>
+	<body id="landing-page">
 
 		<!-- Preloader -->
+		<g:if test="${fixmenu}">
+		<script>
+			$("body").attr("style", "margin-top: 60px;");
+		</script>
+		</g:if>
+		<g:else>
 		<div id="mask">
 		    <div id="loader"></div>
 		</div>
-		
+		</g:else>
 		<header role="banner">
-		    <nav class="navigation navigation-header ">
+		    <nav class="navigation navigation-header ${fixmenu?'fixmenu-clone fixmenu-stick':''}">
 		        <div class="container">
 		            <div class="navigation-brand">
 		                <div class="brand-logo">
@@ -59,7 +64,7 @@
 		                    <li><a href="${createLink(uri:'/')}#intro">Home</a></li>
 		                    <li><a href="${createLink(uri:'/')}#about">About</a></li>
 		                    <li><a href="${createLink(uri:'/')}#features-list">Features</a></li>
-		                    <li><a href="${createLink(controller:'market')}">Marketplace</a></li>
+		                    <li><a href="${createLink(controller:'marketplace')}">Marketplace</a></li>
 		                    <li class="dropdown hidden-sm">
 		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
 		                        <ul class="dropdown-menu" role="menu">
@@ -82,8 +87,11 @@
 		    </nav>
 		</header>
 		
-		<g:layoutBody id="landing-page" />
-		
+		<!-- show views -->
+		<div id="content">
+			<g:layoutBody />
+		</div><!-- content -->
+
 		<footer id="footer" class="footer light" role="contentinfo">
 		    <div class="container">
 		        <div class="footer-content row">

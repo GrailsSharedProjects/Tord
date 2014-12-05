@@ -11,8 +11,8 @@
 		<title><g:layoutTitle default="Grails"/></title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		<meta name="description" content="HumHub is a free social network software and framework built to give you the tools to make teamwork easy and successful."/>
-		<meta name="keywords" content="Sociale Network, Social Intranet, Social Collaboration, Social Enterprise, Social Business, Social Software, Open Source"/>
+		<meta name="description" content="拓德是互联网领先的一站式家装O2O平台"/>
+		<meta name="keywords" content="装修，成都装修，一站式装修平台，一站式家装O2O平台，家装O2O，拓德装饰，拓德进出口贸易有限公司"/>
 		
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon"/>
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.jpg')}"/>
@@ -50,7 +50,7 @@
 		        <div class="container">
 		            <div class="navigation-brand">
 		                <div class="brand-logo">
-		                    <a href="http://www.humhub.org/" class="logo"></a>
+		                    <a href="http://www.tordchina.com/" class="logo"></a>
 		                    <span class="sr-only">HumHub</span>
 		                </div>
 		                <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
@@ -61,21 +61,20 @@
 		            </div>
 		            <div class="navigation-navbar">
 		                <ul class="navigation-bar navigation-bar-left">
-		                    <li><a href="${createLink(uri:'/')}#intro">Home</a></li>
-		                    <li><a href="${createLink(uri:'/')}#about">About</a></li>
-		                    <li><a href="${createLink(uri:'/')}#features-list">Features</a></li>
-		                    <li><a href="${createLink(controller:'marketplace')}">Marketplace</a></li>
+		                    <li><a href="${createLink(uri:'/')}#intro">首页</a></li>
+		                    <li><a href="${createLink(uri:'/')}#about">拓德热点</a></li>
+		                    <li><a href="${createLink(uri:'/')}#features-list">装修效果</a></li>
+		                    <li><a href="${createLink(controller:'marketplace')}">家居建材超市</a></li>
 		                    <li class="dropdown hidden-sm">
-		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">社区 <b class="caret"></b></a>
 		                        <ul class="dropdown-menu" role="menu">
 		                            <li>
 		                            	<a href="https://github.com/humhub/humhub/blob/master/protected/docs/guide/developer/index.md"
-		                                   target="_blank"><i class="fa fa-code"></i>  Documentation</a></li>
-		                            <li><a href="#" target="_blank"><i class="fa fa-bullhorn"></i> Latest updates</a>
+		                                   target="_blank"><i class="fa fa-code"></i> 拓德家装论坛</a></li>
+		                            <li><a href="#" target="_blank"><i class="fa fa-bullhorn"></i> 装修问答</a>
 		                            </li>
-		                            <li><a href="#" target="_blank"><i class="fa fa-bug"></i>Report a bug</a></li>
 		                            <li class="divider"></li>
-		                            <li><a href="#"><i class="fa fa-life-ring"></i> Get support</a></li>
+		                            <li><a href="#"><i class="fa fa-life-ring"></i> 更多帮助</a></li>
 		                        </ul>
 		                    </li>
 		                </ul>
@@ -99,12 +98,12 @@
 		                <div class="logo-wrapper">
 		                    <img src="${assetPath(src:'logo-white.png')}" alt="logo" />
 		                </div>
-		                <p>HumHub is a free social network software and framework built to give you the tools to make teamwork easy and successful.</p>
+		                <p>拓德，互联网领先的一站式家装O2O平台。</p>
 		            </div>
 		            <div class="col-sm-2"></div>
 		            <!--<div class="col-sm-5"></div>-->
 		            <div class="col-sm-5 social-wrap">
-		                <div class="footer-title">Get social with us</div>
+		                <div class="footer-title">关注我们</div>
 		                <ul class="list-inline socials">
 		                    <li><a href="#" target="_blank"><span class="icon icon-socialmedia-08"></span></a></li>
 		                    <li><a href="#" rel="publisher" target="_blank"><span class="icon icon-socialmedia-16"></span></a></li>
@@ -114,11 +113,11 @@
 		
 		        </div>
 		        <div class="copyright">
-		            &copy; 2014 HumHub. All rights reserved.
-		            <a href="/site/imprint" target="_self">Imprint</a> -
-		            <a href="/site/policy" target="_self">Privacy Policy</a> -
-		            <a href="/press" target="_self">Press</a> -
-		            <a href="mailto:info@humhub.org" target="_self">Contact</a>
+		            &copy; ${new Date().getYear()} 拓德-家装O2O平台和设计师社区
+		            <a href="${createLinkTo(controller:'imprint')}" target="_self">关于我们</a> -
+		            <a href="${createLinkTo(controller:'policy')}" target="_self">法律条款</a> -
+		            <a href="${createLinkTo(controller:'press')}" target="_self">媒体信息</a> -
+		            <a href="mailto:quiet_dog@163.com" target="_self">联系我们</a>
 		        </div>
 		    </div>
 		</footer>

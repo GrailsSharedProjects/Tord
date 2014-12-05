@@ -1,6 +1,6 @@
 package com.tord
 
-class AdminController {
+class PolicyController {
 
     def index() { 
         ['fixmenu':true]

@@ -3,25 +3,25 @@
 <html lang="zh">
 <head>
 	<meta name="layout" content="main"/>
-    <title>INDEX</title>
+    <title>成都装修_成都装修公司_拓德一站式家装O2O平台</title>
 </head>
 
 <body>
 
 <div id="intro" class="static-header light clearfix">
     <div class="text-heading">
-        <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">A flexible Open Source </h1>
+        <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">互联网领先的</h1>
 
-        <h1 class="animated hiding" data-animation="fadeInDown" data-delay="500"><strong>Social Network Kit</strong>
+        <h1 class="animated hiding" data-animation="fadeInDown" data-delay="500"><strong>一站式家装O2O平台</strong>
         </h1>
         <!--<p class="animated hiding" data-animation="fadeInDown" data-delay="500">for business and collaboration</p>-->
         <ul class="list-inline">
             <li><a href="/hosting" class="btn btn-default animated hiding"
                    data-animation="bounceIn"
                    data-delay="700" id="demo-button" data-toggle="modal"
-                   data-target="#globalModal">Try demo</a></li>
-            <li><a href="https://github.com/humhub/humhub/" target="_blank" class="btn btn-default animated hiding"
-                   data-animation="bounceIn" data-delay="900"> Get on Github</a></li>
+                   data-target="#globalModal">我要装修</a></li>
+            <li><a href="${createLinkTo(controller:'marketplace')}" target="_blank" class="btn btn-default animated hiding"
+                   data-animation="bounceIn" data-delay="900"> 我要采购</a></li>
         </ul>
     </div>
     <div class="video-wrapper">

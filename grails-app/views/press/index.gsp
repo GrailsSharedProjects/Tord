@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="zh">
 <head>
-    <meta name="layout" content="main"/>
+    <meta name="layout" content="main_tord"/>
     <title>媒体信息</title>
 </head>
 <body>

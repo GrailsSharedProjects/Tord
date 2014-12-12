@@ -6,8 +6,14 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-
-        "/"(view:"/index")
-        "500"(view:'/error')
+		
+		"/admin/refresh"(controller:'admin', action: 'refresh')
+		"/sideways"(view:'/sideways/index')
+		"/sideways2"(view:'/sideways/clickmode')
+        "/"(controller:'home')
+        "500"(view:'/errors/500')
+        "403"(view:'/errors/403')
+        "404"(view:'/errors/404')
+        "503"(view:'/errors/503')
 	}
 }

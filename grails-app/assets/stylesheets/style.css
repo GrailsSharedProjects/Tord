@@ -832,6 +832,10 @@ blockquote:after {
     font-weight: 700;
     border-color: #d1d8dd;
 }
+.table a{
+	color: black;
+	font-style: italic;
+}
 
 .table > thead > tr > th,
 .table > tbody > tr > td {

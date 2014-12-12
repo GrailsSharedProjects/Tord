@@ -2,5 +2,5 @@ package com.tord
 
 class ImprintController {
 
-    def index() { }
+    def index() {}
 }

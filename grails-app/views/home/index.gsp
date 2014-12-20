@@ -213,7 +213,7 @@
 		<div class="col-md-3 col-sm-6 col-xs-12">
             <article class="center">
             	<a href="#" data-toggle="modal" data-target="#globalModal">
-            	<asset:image src="grey.gif" class="lazy" data-original="${assetPath(src: p.url)}" style="width: 100%" />
+            	<img src="${assetPath2(src: p.url, width:243, height:243)}" style="width: 100%" />
             	</a>
             	<noscript><img src="${assetPath(src: p.url)}" style="width: 100%" /></noscript>
                 <span class="h7">${p.title }</span>

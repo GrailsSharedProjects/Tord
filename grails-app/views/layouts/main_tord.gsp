@@ -143,7 +143,7 @@
 
 		<asset:javascript src="application.js"/>
 	</body>
-	<script type="text/javascript">
-		$("img.lazy").show().lazyload();
-	</script>
+<%--	<script type="text/javascript">--%>
+<%--		$("img.lazy").show().lazyload();--%>
+<%--	</script>--%>
 </html>

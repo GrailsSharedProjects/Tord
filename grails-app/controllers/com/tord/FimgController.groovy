@@ -13,7 +13,7 @@ import javax.imageio.ImageWriter
 import javax.imageio.stream.ImageOutputStream
 
 import org.apache.ivy.util.FileUtil
-import org.springframework.core.io.ByteArrayResource
+import org.springframework.core.io.Resource
 
 import com.wicky.tools.ImageScaleUtil
 
@@ -22,7 +22,7 @@ class FimgController {
 	def assetResourceLocator
 	
     def index() { 
-		print params
+		println params
 		def paramsPath = params.path
 		def paramsWidth = params.width.toInteger()
 		def paramsHeight = params.height.toInteger()
@@ -30,21 +30,34 @@ class FimgController {
 		
 		// lookup thumb
 		def thumbPath = "${paramsPath.split('\\.')[0]}_w${paramsWidth}_h${paramsHeight}.${format}";
-		ByteArrayResource thumbRes = assetResourceLocator.findAssetForURI(thumbPath);
+		Resource thumbRes = assetResourceLocator.findAssetForURI(thumbPath);
 		
 		if(thumbRes == null || !thumbRes.exists()){
 			// if no thumb then create thumb
-			ByteArrayResource myResource = assetResourceLocator.findAssetForURI(paramsPath)
+			Resource myResource = assetResourceLocator.findAssetForURI(paramsPath)
 			if(myResource != null){
+				def thumbRealPath
+				
 				def webRootDir = servletContext.getRealPath("/");
-				println webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath;
-				def thumb = new File(webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath);
+				def assetFolder = new File(webRootDir + "assets");
+				if(assetFolder.exists() && assetFolder.isDirectory()){
+					// deployed
+					thumbRealPath = webRootDir + "assets/thumbs/" + thumbPath;
+				}else{
+					// not deployed
+					thumbRealPath = webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath
+				}
+				
+				println "thumbRealPath: ${thumbRealPath}";
+				
+				def thumb = new File(thumbRealPath);
 				new File(thumb.getParent()).mkdirs();
 				
-				ByteArrayInputStream instr = new ByteArrayInputStream(myResource.getByteArray());
-				BufferedImage image = ImageIO.read(instr);
+				// get original image
+				BufferedImage image = ImageIO.read(myResource.getInputStream());
+				// scale image
 				BufferedImage newImg = ImageScaleUtil.resizeUsingJavaAlgo(image, paramsWidth, paramsHeight);
-
+				// write new image
 				ImageScaleUtil.writeJpeg(newImg, thumb, 1.0f)
 			}
 			
@@ -53,17 +66,12 @@ class FimgController {
 		}
 		// if thumb exits then return it
 		if(thumbRes != null && thumbRes.exists()){
-			ByteArrayInputStream instr = new ByteArrayInputStream(thumbRes.getByteArray());
-			BufferedImage image = ImageIO.read(instr);
-			
-			OutputStream os=response.getOutputStream(); //得到输出流
-			writeOutputStream(image, os);
-			os.flush();
+			redirect(uri: "/assets/"+thumbPath);
 		}
 	}
 	
 	def width(){
-		print params
+		println params
 		def paramsPath = params.path
 		def paramsWidth = params.width.toInteger()
 		def paramsHeight = paramsWidth
@@ -71,21 +79,34 @@ class FimgController {
 		
 		// lookup thumb
 		def thumbPath = "${paramsPath.split('\\.')[0]}_w${paramsWidth}_h${paramsHeight}.${format}";
-		ByteArrayResource thumbRes = assetResourceLocator.findAssetForURI(thumbPath);
+		Resource thumbRes = assetResourceLocator.findAssetForURI(thumbPath);
 		
 		if(thumbRes == null || !thumbRes.exists()){
 			// if no thumb then create thumb
-			ByteArrayResource myResource = assetResourceLocator.findAssetForURI(paramsPath)
+			Resource myResource = assetResourceLocator.findAssetForURI(paramsPath)
 			if(myResource != null){
+				def thumbRealPath
+				
 				def webRootDir = servletContext.getRealPath("/");
-				println webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath;
-				def thumb = new File(webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath);
+				def assetFolder = new File(webRootDir + "assets");
+				if(assetFolder.exists() && assetFolder.isDirectory()){
+					// deployed
+					thumbRealPath = webRootDir + "assets/thumbs/" + thumbPath;
+				}else{
+					// not deployed
+					thumbRealPath = webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath
+				}
+				
+				println "thumbRealPath: ${thumbRealPath}";
+				
+				def thumb = new File(thumbRealPath);
 				new File(thumb.getParent()).mkdirs();
 				
-				ByteArrayInputStream instr = new ByteArrayInputStream(myResource.getByteArray());
-				BufferedImage image = ImageIO.read(instr);
+				// get original image
+				BufferedImage image = ImageIO.read(myResource.getInputStream());
+				// scale image
 				BufferedImage newImg = ImageScaleUtil.resizeUsingJavaAlgo(image, paramsWidth, paramsHeight);
-
+				// write new image
 				ImageScaleUtil.writeJpeg(newImg, thumb, 1.0f)
 			}
 			
@@ -94,17 +115,12 @@ class FimgController {
 		}
 		// if thumb exits then return it
 		if(thumbRes != null && thumbRes.exists()){
-			ByteArrayInputStream instr = new ByteArrayInputStream(thumbRes.getByteArray());
-			BufferedImage image = ImageIO.read(instr);
-			
-			OutputStream os=response.getOutputStream(); //得到输出流
-			writeOutputStream(image, os);
-			os.flush();
+			redirect(uri: "/assets/"+thumbPath);
 		}
 	}
 	
 	def height(){
-		print params
+		println params
 		def paramsPath = params.path
 		def paramsWidth = params.height.toInteger()
 		def paramsHeight = params.height.toInteger()
@@ -112,21 +128,34 @@ class FimgController {
 		
 		// lookup thumb
 		def thumbPath = "${paramsPath.split('\\.')[0]}_w${paramsWidth}_h${paramsHeight}.${format}";
-		ByteArrayResource thumbRes = assetResourceLocator.findAssetForURI(thumbPath);
+		Resource thumbRes = assetResourceLocator.findAssetForURI(thumbPath);
 		
 		if(thumbRes == null || !thumbRes.exists()){
 			// if no thumb then create thumb
-			ByteArrayResource myResource = assetResourceLocator.findAssetForURI(paramsPath)
+			Resource myResource = assetResourceLocator.findAssetForURI(paramsPath)
 			if(myResource != null){
+				def thumbRealPath
+				
 				def webRootDir = servletContext.getRealPath("/");
-				println webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath;
-				def thumb = new File(webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath);
+				def assetFolder = new File(webRootDir + "assets");
+				if(assetFolder.exists() && assetFolder.isDirectory()){
+					// deployed
+					thumbRealPath = webRootDir + "assets/thumbs/" + thumbPath;
+				}else{
+					// not deployed
+					thumbRealPath = webRootDir.replace("web-app", "grails-app/assets/thumbs") + thumbPath
+				}
+				
+				println "thumbRealPath: ${thumbRealPath}";
+				
+				def thumb = new File(thumbRealPath);
 				new File(thumb.getParent()).mkdirs();
 				
-				ByteArrayInputStream instr = new ByteArrayInputStream(myResource.getByteArray());
-				BufferedImage image = ImageIO.read(instr);
+				// get original image
+				BufferedImage image = ImageIO.read(myResource.getInputStream());
+				// scale image
 				BufferedImage newImg = ImageScaleUtil.resizeUsingJavaAlgo(image, paramsWidth, paramsHeight);
-
+				// write new image
 				ImageScaleUtil.writeJpeg(newImg, thumb, 1.0f)
 			}
 			
@@ -135,40 +164,14 @@ class FimgController {
 		}
 		// if thumb exits then return it
 		if(thumbRes != null && thumbRes.exists()){
-			ByteArrayInputStream instr = new ByteArrayInputStream(thumbRes.getByteArray());
-			BufferedImage image = ImageIO.read(instr);
-			
-			OutputStream os=response.getOutputStream(); //得到输出流
-			writeOutputStream(image, os);
-			os.flush();
-		}
-	}
-	
-	private void writeOutputStream(BufferedImage image, OutputStream os){
-		ImageWriter writer = null;
-		ImageOutputStream out=ImageIO.createImageOutputStream(os);
-		try {
-			writer = ImageIO.getImageWritersByFormatName("jpeg").next();
-			ImageWriteParam param = writer.getDefaultWriteParam();
-			param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-			param.setCompressionQuality(1.0f);
-			writer.setOutput(out);
-			IIOImage iioImage = new IIOImage(image, null, null);
-			writer.write(null, iioImage, param);
-		} catch (IOException ex) {
-			throw ex;
-		} finally {
-			if (writer != null) {
-				writer.dispose();
-			}
+			redirect(uri: "/assets/"+thumbPath);
 		}
 	}
 	
 	def assets(){
-		print params
+		println params
 		def paramsPath = params.path
-		def paramsFormat = params.format
-		redirect(uri: "/assets/"+paramsPath+"."+paramsFormat);
+		redirect(uri: "/assets/"+paramsPath);
 	}
 	
 }

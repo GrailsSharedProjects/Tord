@@ -17,21 +17,21 @@
                    data-animation="bounceIn"
                    data-delay="700" id="demo-button" data-toggle="modal"
                    data-target="#globalModal">我要装修</a></li>
-            <li><a href="${createLinkTo(controller:'marketplace')}" target="_blank" class="btn btn-default animated hiding"
+            <li><a href="${createLink(uri:'/marketplace')}" target="_blank" class="btn btn-default animated hiding"
                    data-animation="bounceIn" data-delay="900"> 我要采购</a></li>
         </ul>
     </div>
     <div class="video-wrapper">
         <div class="container">
             <img src="${assetPath(src: 'features/app3.png')}" alt="video" class="img-responsive animated hiding"
-                 data-animation="bounceInUp" data-delay="1000"/>
+                 data-animation="bounceInUp" data-delay="800"/>
         </div>
     </div>
 </div>
 
 <a id="showHere"></a>
 <br/>
-<section id="about" class="section dark">
+<section id="hotspot" class="section dark">
 
     <div class="container">
 
@@ -51,10 +51,10 @@
                 <br/><br/>
                 <article>
 
-                    <p>HumHub is a free social network software and framework built to give you the tools to make
+                    <p>Tord is a free social network software and framework built to give you the tools to make
                         teamwork easy and successful.</p>
 
-                    <p class="thin">It's lightweight, powerful and comes with an user-friendly interface. With HumHub
+                    <p class="thin">It's lightweight, powerful and comes with an user-friendly interface. With Tord
                         you can create your own customized social network, social intranet or huge social enterprise
                         application that really fits your needs. </p>
 
@@ -66,9 +66,30 @@
         </div>
     </div>
 
+</section>
 
-    <hr class="no-margin"/>
+<section id="newsletter" class="long-block light">
+    <div class="container center">
+        <div class="col-sm-12 col-lg-5">
+            <i class="icon icon-seo-icons-24 pull-left"></i>
+            <article class="pull-left">
+                <br/>
 
+                <h2><strong>Get</strong> live updates</h2>
+
+                <!--<p class="thin">No spam promise - only latest news and prices!</p>-->
+                <p class="thin">Be amongst the first to know about upcoming features</p>
+            </article>
+        </div>
+        <div class="col-sm-12 col-lg-7">
+
+<%--            <div id="newsletter-signup"></div>--%>
+
+        </div>
+    </div>
+</section>
+
+<section id="product" class="section dark" >
 
     <div class="container">
 
@@ -78,7 +99,7 @@
             <h2>使用马赛克</h2>
 
             <div class="sub-heading">
-                HumHub is fast, easy and the most budget-friendly way to build your own social software.
+                Tord is fast, easy and the most budget-friendly way to build your own social software.
             </div>
             <br/><br/>
 
@@ -87,7 +108,7 @@
                     <i class="howitworks icon icon-seo-icons-25 icon-active"></i>
                     <span class="h7">OPEN</span>
 
-                    <p class="thin">HumHub is completely open- source. Take advantage of the work already done and even
+                    <p class="thin">Tord is completely open- source. Take advantage of the work already done and even
                         improve it. Every suggestion or help is welcome.</p>
                 </article>
                 <!--<span class="icon icon-arrows-04"></span>-->
@@ -97,7 +118,7 @@
                     <i class="howitworks icon icon-graphic-design-07 icon-active"></i>
                     <span class="h7">Flexible</span>
 
-                    <p class="thin">With a powerful module system you can extend HumHub by using third party tools,
+                    <p class="thin">With a powerful module system you can extend Tord by using third party tools,
                         writing your own or connect existing software.</p>
                 </article>
                 <!--<span class="icon icon-arrows-04"></span>-->
@@ -107,7 +128,7 @@
                     <i class="howitworks icon icon-badges-votes-14 icon-active"></i>
                     <span class="h7">Secure</span>
 
-                    <p class="thin">Your server, your data, your rules. HumHub is a self- hosted solution and runs on
+                    <p class="thin">Your server, your data, your rules. Tord is a self- hosted solution and runs on
                         almost every server. You are in the full control of your data.</p>
                 </article>
             </div>
@@ -117,7 +138,7 @@
                     <span class="h7">Services</span>
 
                     <p class="thin">From small modifications until full custom platforms, we provide professional
-                        services to build individual HumHub solutions for you.</p>
+                        services to build individual Tord solutions for you.</p>
                     <br/>
                     <a href="${createLink(controller:'marketplace')}" class="btn btn-secondary" >现在就去选购</a>
                 </article>
@@ -144,7 +165,7 @@
                 <article>
                     <h3>Powerful module system</h3>
 
-                    <p>The magic behind HumHub are modules. With modules you can extend HumHub to do almost anything you
+                    <p>The magic behind Tord are modules. With modules you can extend Tord to do almost anything you
                         can imagine.</p>
 
                     <p class="thin">Integrate your internal workflows, plug in your existing software or connect to
@@ -170,36 +191,21 @@
             <article class="pull-left">
                 <br/>
 
-                <h2><strong>订阅</strong>拓德每日播报</h2>
+                <h2><strong>Get</strong> live updates</h2>
 
                 <!--<p class="thin">No spam promise - only latest news and prices!</p>-->
-                <p class="thin">实时更新最时尚的家装理念</p>
+                <p class="thin">Be amongst the first to know about upcoming features</p>
             </article>
         </div>
-			<div class="col-sm-12 col-lg-7">
+        <div class="col-sm-12 col-lg-7">
 
-				<div id="newsletter-signup">
-					<div id="signup-form">
-						<g:form url="[action:'signup',controller:'newsletter']" method="post" class="form" id="subscribe">
-							<div class="form-group form-inline">
-								<g:textField name="NewsletterEmail" size="35" class="form-control required" placeholder="您的邮箱@email.com" />
-								<g:submitButton name="SUBSCRIBE" value="立即订阅" class="btn btn-default" id="newsletter-signup-submit-button" />
-								<br> <span id="newsletter-signup-response"> </span>
-								<span id="newsletter-signup-successful"> </span>
-							</div>
-						</g:form>
-					
-					</div>
-				</div>
+<%--            <div id="newsletter-signup"></div>--%>
 
-			</div>
-
-
-		</div>
+        </div>
+    </div>
 </section>
 
-
-<section id="features-list" class="section dark">
+<section id="decoration-list" class="section dark">
 
     <h2>装修效果展示</h2>
 

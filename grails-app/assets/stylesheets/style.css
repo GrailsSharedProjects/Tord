@@ -403,18 +403,18 @@ article {
 }
 
 .navigation-brand .brand-logo {
-    width: 215px;
+    width: 255px;
     height: 50px;
 }
 
 .navigation-brand .brand-logo .logo {
     display: block;
     height: 55px;
-    background: url(logo.png) center center no-repeat;
+    background: url(tord_small.png) center center no-repeat;
 }
 
 .fixmenu-clone .brand-logo .logo {
-    background: url(logo-inverted.png) center center no-repeat;
+    background: url(tord_small.png) center center no-repeat;
 }
 
 .navigation-brand .brand-logo h4 {

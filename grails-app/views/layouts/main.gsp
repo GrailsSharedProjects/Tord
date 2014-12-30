@@ -51,7 +51,7 @@
 		            <div class="navigation-brand">
 		                <div class="brand-logo">
 		                    <a href="http://www.tordchina.com/" class="logo"></a>
-		                    <span class="sr-only">Tord</span>
+		                    <span class="sr-only">HumHub</span>
 		                </div>
 		                <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
 		                    <span class="icon-bar"></span>
@@ -69,7 +69,7 @@
 		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">社区 <b class="caret"></b></a>
 		                        <ul class="dropdown-menu" role="menu">
 		                            <li>
-		                            	<a href="https://github.com/Tord/Tord/blob/master/protected/docs/guide/developer/index.md"
+		                            	<a href="https://github.com/humhub/humhub/blob/master/protected/docs/guide/developer/index.md"
 		                                   target="_blank"><i class="fa fa-code"></i> 拓德家装论坛</a></li>
 		                            <li><a href="#" target="_blank"><i class="fa fa-bullhorn"></i> 装修问答</a>
 		                            </li>
@@ -114,9 +114,9 @@
 		        </div>
 		        <div class="copyright">
 		            &copy; ${new Date().getYear()} 拓德-家装O2O平台和设计师社区
-		            <a href="${createLink(uri:'/imprint')}" target="_self">关于我们</a> -
-		            <a href="${createLink(uri:'/policy')}" target="_self">法律条款</a> -
-		            <a href="${createLink(uri:'/press')}" target="_self">媒体信息</a> -
+		            <a href="${createLinkTo(controller:'imprint')}" target="_self">关于我们</a> -
+		            <a href="${createLinkTo(controller:'policy')}" target="_self">法律条款</a> -
+		            <a href="${createLinkTo(controller:'press')}" target="_self">媒体信息</a> -
 		            <a href="mailto:quiet_dog@163.com" target="_self">联系我们</a>
 		        </div>
 		    </div>

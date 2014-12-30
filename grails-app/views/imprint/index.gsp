@@ -14,7 +14,7 @@
 
             <h1>Imprint</h1>Information in accordance with section 5 TMG<br/><br/>
 
-            <h3>Tord is a project by</h3>
+            <h3>HumHub is a project by</h3>
 
             <p class="thin">zeros+ones GmbH<br/>Marienstrasse
                 17<br/>80331 Munich<br/><br/></p>
@@ -29,8 +29,8 @@
             <h3>Contact</h3>
 
             <p class="thin">Telephone: +49 89 520 460 - 0<br/>Fax: +49 89 520 460 - 10<br/>E-Mail: <a
-                    href="mailto:info@Tord.org">info@Tord.org</a><br/>Web: <a
-                    href="http://www.Tord.org" target="_blank">http://www.Tord.org</a><br/><br/></p>
+                    href="mailto:info@humhub.org">info@humhub.org</a><br/>Web: <a
+                    href="http://www.humhub.org" target="_blank">http://www.humhub.org</a><br/><br/></p>
 
             <h3>Register entry</h3>
 

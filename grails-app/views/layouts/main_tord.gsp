@@ -50,8 +50,8 @@
 		        <div class="container">
 		            <div class="navigation-brand">
 		                <div class="brand-logo">
-		                    <a href="${createLink(uri:'/') }" class="logo"></a>
-		                    <span class="sr-only">Tord</span>
+		                    <a href="${createLinkTo(uri:'/') }" class="logo"></a>
+		                    <span class="sr-only">HumHub</span>
 		                </div>
 		                <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
 		                    <span class="icon-bar"></span>
@@ -62,27 +62,27 @@
 		            <div class="navigation-navbar">
 		                <ul class="navigation-bar navigation-bar-left">
 		                    <li><a href="${createLink(uri:'/')}#intro">首页</a></li>
-		                    <li><a href="${createLink(uri:'/')}#hotspot">拓德热点</a></li>
-		                    <li><a href="${createLink(uri:'/')}#product">产品培训</a></li>
-		                    <li><a href="${createLink(uri:'/')}#decoration-list">装修效果</a></li>
-		                    <li><a href="${createLink(uri:'/imprint')}">公司简介</a></li>
+		                    <li><a href="${createLink(uri:'/')}#about">拓德热点</a></li>
+		                    <li><a href="${createLink(uri:'/')}#features-list">装修效果</a></li>
+		                    <li><a href="${createLink(uri:'/')}#about">公司简介</a></li>
+		                    <li><a href="${createLink(uri:'/')}#about">产品培训</a></li>
 		                    <li><a href="${createLink(controller:'marketplace')}">新品发布</a></li>
 		                    <li><a href="${createLink(controller:'marketplace')}">家居建材超市</a></li>
-<%--		                    <li class="dropdown hidden-sm">--%>
-<%--		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">社区 <b class="caret"></b></a>--%>
-<%--		                        <ul class="dropdown-menu" role="menu">--%>
-<%--		                            <li>--%>
-<%--		                            	<a href="#"--%>
-<%--		                                   target="_blank"><i class="fa fa-code"></i> 拓德家装论坛</a></li>--%>
-<%--		                            <li><a href="#" target="_blank"><i class="fa fa-bullhorn"></i> 装修问答</a>--%>
-<%--		                            </li>--%>
-<%--		                            <li class="divider"></li>--%>
-<%--		                            <li><a href="#"><i class="fa fa-life-ring"></i> 更多帮助</a></li>--%>
-<%--		                        </ul>--%>
-<%--		                    </li>--%>
+		                    <li class="dropdown hidden-sm">
+		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">社区 <b class="caret"></b></a>
+		                        <ul class="dropdown-menu" role="menu">
+		                            <li>
+		                            	<a href="https://github.com/humhub/humhub/blob/master/protected/docs/guide/developer/index.md"
+		                                   target="_blank"><i class="fa fa-code"></i> 拓德家装论坛</a></li>
+		                            <li><a href="#" target="_blank"><i class="fa fa-bullhorn"></i> 装修问答</a>
+		                            </li>
+		                            <li class="divider"></li>
+		                            <li><a href="#"><i class="fa fa-life-ring"></i> 更多帮助</a></li>
+		                        </ul>
+		                    </li>
 		                </ul>
 		              <ul class="navigation-bar navigation-bar-right">
-		                    <li class="featured"><a href="${createLink(controller:'personalization')}" >私人订制服务</a></li>
+		                    <li class="featured"><a href="#" data-toggle="modal" data-target="#globalModal">Professional Services</a></li>
 		                </ul>
 		            </div>
 		        </div>
@@ -99,7 +99,7 @@
 		        <div class="footer-content row">
 		            <div class="col-sm-5">
 		                <div class="logo-wrapper">
-		                    <img src="${assetPath(src:'tord_small.png')}" alt="logo" />
+		                    <img src="${assetPath(src:'logo-white.png')}" alt="logo" />
 		                </div>
 		                <p>拓德，互联网领先的一站式家装O2O平台。</p>
 		            </div>
@@ -116,10 +116,10 @@
 		
 		        </div>
 		        <div class="copyright">
-		            &copy; ${1900 + new Date().year} 拓德-家装O2O平台和设计师社区
-		            <a href="${createLink(uri:'/imprint')}" target="_self">关于我们</a> -
-		            <a href="${createLink(uri:'/policy')}" target="_self">法律条款</a> -
-		            <a href="${createLink(uri:'/press')}" target="_self">媒体信息</a> -
+		            &copy; ${new Date().getYear()} 拓德-家装O2O平台和设计师社区
+		            <a href="${createLinkTo(controller:'imprint')}" target="_self">关于我们</a> -
+		            <a href="${createLinkTo(controller:'policy')}" target="_self">法律条款</a> -
+		            <a href="${createLinkTo(controller:'press')}" target="_self">媒体信息</a> -
 		            <a href="mailto:quiet_dog@163.com" target="_self">联系我们</a>
 		        </div>
 		    </div>

@@ -91,6 +91,38 @@
 			<g:layoutBody />
 		</div><!-- content -->
 
+<<<<<<< HEAD
+		<footer id="footer" class="footer light" role="contentinfo">
+		    <div class="container">
+		        <div class="footer-content row">
+		            <div class="col-sm-5">
+		                <div class="logo-wrapper">
+		                    <img src="${assetPath(src:'logo-white.png')}" alt="logo" />
+		                </div>
+		                <p>拓德，互联网领先的一站式家装O2O平台。</p>
+		            </div>
+		            <div class="col-sm-2"></div>
+		            <!--<div class="col-sm-5"></div>-->
+		            <div class="col-sm-5 social-wrap">
+		                <div class="footer-title">关注我们</div>
+		                <ul class="list-inline socials">
+		                    <li><a href="#" target="_blank"><span class="icon icon-socialmedia-08"></span></a></li>
+		                    <li><a href="#" rel="publisher" target="_blank"><span class="icon icon-socialmedia-16"></span></a></li>
+		                    <li><a href="#" target="_blank"><span class="icon icon-socialmedia-07"></span></a></li>
+		                </ul>
+		            </div>
+		
+		        </div>
+		        <div class="copyright">
+		            &copy; ${new Date().getYear()} 拓德-家装O2O平台和设计师社区
+		            <a href="${createLinkTo(controller:'imprint')}" target="_self">关于我们</a> -
+		            <a href="${createLinkTo(controller:'policy')}" target="_self">法律条款</a> -
+		            <a href="${createLinkTo(controller:'press')}" target="_self">媒体信息</a> -
+		            <a href="mailto:quiet_dog@163.com" target="_self">联系我们</a>
+		        </div>
+		    </div>
+		</footer>
+=======
 <%--		<footer id="footer" class="footer light" role="contentinfo">--%>
 <%--		    <div class="container">--%>
 <%--		        <div class="footer-content row">--%>
@@ -121,6 +153,7 @@
 <%--		        </div>--%>
 <%--		    </div>--%>
 <%--		</footer>--%>
+>>>>>>> parent of 57f93ed... layout changes
 		
 		<div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
 		

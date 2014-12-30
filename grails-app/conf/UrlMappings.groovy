@@ -17,6 +17,9 @@ class UrlMappings {
         "404"(view:'/errors/404')
         "503"(view:'/errors/503')
 		
+		"/fimg/upload"(view:'/fimg/upload')
+		"/fimg/success"(view:'/fimg/success')
+		
         "/fimg/${method}_h${height}/${path}**"(controller:"fimg", action:"height")
         "/fimg/${method}_w${width}/${path}**"(controller:"fimg", action:"width")
 		"/fimg/${method}_w${width}_h${height}/${path}**"(controller:"fimg", action:"index")

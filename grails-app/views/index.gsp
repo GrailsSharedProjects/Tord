@@ -20,7 +20,7 @@
                    data-animation="bounceIn"
                    data-delay="700" id="demo-button" data-toggle="modal"
                    data-target="#globalModal">我要装修</a></li>
-            <li><a href="${createLink(uri:'/marketplace')}" target="_blank" class="btn btn-default animated hiding"
+            <li><a href="${createLinkTo(controller:'marketplace')}" target="_blank" class="btn btn-default animated hiding"
                    data-animation="bounceIn" data-delay="900"> 我要采购</a></li>
         </ul>
     </div>
@@ -54,10 +54,10 @@
                 <br/><br/>
                 <article>
 
-                    <p>Tord is a free social network software and framework built to give you the tools to make
+                    <p>HumHub is a free social network software and framework built to give you the tools to make
                         teamwork easy and successful.</p>
 
-                    <p class="thin">It's lightweight, powerful and comes with an user-friendly interface. With Tord
+                    <p class="thin">It's lightweight, powerful and comes with an user-friendly interface. With HumHub
                         you can create your own customized social network, social intranet or huge social enterprise
                         application that really fits your needs. </p>
 
@@ -81,7 +81,7 @@
             <h2>Powerful, flexible and 100% open source</h2>
 
             <div class="sub-heading">
-                Tord is fast, easy and the most budget-friendly way to build your own social software.
+                HumHub is fast, easy and the most budget-friendly way to build your own social software.
             </div>
             <br/><br/>
 
@@ -90,7 +90,7 @@
                     <i class="howitworks icon icon-seo-icons-25 icon-active"></i>
                     <span class="h7">OPEN</span>
 
-                    <p class="thin">Tord is completely open- source. Take advantage of the work already done and even
+                    <p class="thin">HumHub is completely open- source. Take advantage of the work already done and even
                         improve it. Every suggestion or help is welcome.</p>
                 </article>
                 <!--<span class="icon icon-arrows-04"></span>-->
@@ -100,7 +100,7 @@
                     <i class="howitworks icon icon-graphic-design-07 icon-active"></i>
                     <span class="h7">Flexible</span>
 
-                    <p class="thin">With a powerful module system you can extend Tord by using third party tools,
+                    <p class="thin">With a powerful module system you can extend HumHub by using third party tools,
                         writing your own or connect existing software.</p>
                 </article>
                 <!--<span class="icon icon-arrows-04"></span>-->
@@ -110,7 +110,7 @@
                     <i class="howitworks icon icon-badges-votes-14 icon-active"></i>
                     <span class="h7">Secure</span>
 
-                    <p class="thin">Your server, your data, your rules. Tord is a self- hosted solution and runs on
+                    <p class="thin">Your server, your data, your rules. HumHub is a self- hosted solution and runs on
                         almost every server. You are in the full control of your data.</p>
                 </article>
             </div>
@@ -120,7 +120,7 @@
                     <span class="h7">Services</span>
 
                     <p class="thin">From small modifications until full custom platforms, we provide professional
-                        services to build individual Tord solutions for you.</p>
+                        services to build individual HumHub solutions for you.</p>
                     <br/>
                     <a href="/service/form" class="btn btn-secondary"
                        data-toggle="modal" data-target="#globalModal">Get in touch</a>
@@ -148,7 +148,7 @@
                 <article>
                     <h3>Powerful module system</h3>
 
-                    <p>The magic behind Tord are modules. With modules you can extend Tord to do almost anything you
+                    <p>The magic behind HumHub are modules. With modules you can extend HumHub to do almost anything you
                         can imagine.</p>
 
                     <p class="thin">Integrate your internal workflows, plug in your existing software or connect to

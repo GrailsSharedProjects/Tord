@@ -193,7 +193,7 @@
 		                    </li>
 		                </ul>
 		              <ul class="navigation-bar navigation-bar-right">
-		                    <li class="featured"><a href="#" data-toggle="modal" data-target="#globalModal">Professional Services</a></li>
+		                    <li class="featured"><a id="modalShow" href="${createLink(uri: '/fimg/upload')}" data-toggle="modal" data-target="#globalModal">Professional Services</a></li>
 		                </ul>
 		            </div>
 		        </div>
@@ -222,9 +222,9 @@
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<asset:javascript src="application.js"/>
 	</body>
-<%--	<script type="text/javascript">--%>
+	<script type="text/javascript">
 <%--		$("img.lazy").show().lazyload();--%>
-<%--	</script>--%>
+	</script>
 <script>
 function initEditor(){
 	tinymce.init({

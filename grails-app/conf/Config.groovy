@@ -112,6 +112,82 @@ log4j.main = {
            'org.codehaus.groovy.grails.plugins',            // plugins
            'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
            'org.springframework',
-           'org.hibernate',
-           'net.sf.ehcache.hibernate'
+		   'org.hibernate'
+	
+    warn 'grails.app.services.grails.plugin.springsecurity.ui.SpringSecurityUiService'
+
+	debug 'net.sf.ehcache.hibernate'
+	
 }
+
+// assets
+grails.assets.excludes = ["tiny_mce/src/*.js"]
+grails.assets.includes = ["**/*.map"]
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.tord.auth.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.tord.auth.UserRole'
+grails.plugin.springsecurity.authority.className = 'com.tord.auth.Role'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/dbconsole/**':                ['permitAll'],
+	'/user/**':                ['permitAll'],
+	 '/role/**':                ['permitAll'],
+	 '/register/**':                ['permitAll'],
+	 '/registrationCode/**':                ['permitAll'],
+	 '/securityInfo/**':                ['permitAll'],
+	 '/admin/**':                ['permitAll'],
+	 '/marketplace/**':                ['permitAll'],
+	 
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/assets/**':                     ['permitAll'],
+	'/fimg/**':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll'],
+
+]
+
+// global settings
+def emailSmtp = "smtp.163.com";
+def emailFrom = "quiet_dog@163.com";
+
+// mail api
+grails {
+	mail {
+	   host = emailSmtp
+	   port = 465
+	   username = emailFrom
+	   password = "hsbhrsc"
+	   props = [ "mail.smtp.auth":"true",
+						"mail.smtp.socketFactory.port":"465",
+						"mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+						"mail.smtp.socketFactory.fallback":"false"  ]
+	}
+ }
+
+// security ui
+grails.plugin.springsecurity.ui.register.emailBody = '''\
+Hi ${user.username},<br/>
+&nbsp;&nbsp;Please click <a href="${url}">here</a> to finish your registration.<br/>
+Yours,<br/>
+Tord Inc.'''
+grails.plugin.springsecurity.ui.register.emailFrom = emailFrom
+grails.plugin.springsecurity.ui.register.emailSubject = 'Confirm Registration - Tord'
+grails.plugin.springsecurity.ui.register.defaultRoleNames = ['ROLE_USER']
+grails.plugin.springsecurity.ui.register.postRegisterUrl = '/'
+
+grails.plugin.springsecurity.ui.password.minLength = 8
+grails.plugin.springsecurity.ui.password.maxLength	= 64
+grails.plugin.springsecurity.ui.password.validationRegex = '^.*(?=.*\\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&]).*$'
+
+grails.plugin.springsecurity.ui.forgotPassword.emailBody = '''\
+Hi ${user.username},<br/>
+&nbsp;&nbsp;Please click <a href="${url}">here</a> to reset your password.<br/>
+Yours,<br/>
+Tord Inc.'''
+grails.plugin.springsecurity.ui.forgotPassword.emailFrom = emailFrom
+grails.plugin.springsecurity.ui.forgotPassword.emailSubject = 'Reset Password - Tord'
+grails.plugin.springsecurity.ui.forgotPassword.postResetUrl = '/'

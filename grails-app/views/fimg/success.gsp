@@ -6,8 +6,7 @@
 </head>
 <body>
   <div class="body">
-	success!!!
-	${params }
+  <div><span style="float:left">成功！</span><img src="${params.url}?imageview/3/h/50/q/100"/></div>
   </div>
 </body>
 </html>

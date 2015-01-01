@@ -157,6 +157,7 @@
 				self.unbindInterval();
 
 				//Scroll to the correct position
+				if(newLoc != "#undefined")
 				self.scrollTo(newLoc, function() {
 					//Do we need to change the hash?
 					if(self.config.changeHash) {

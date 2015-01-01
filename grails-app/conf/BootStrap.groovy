@@ -1,5 +1,8 @@
 import com.tord.Photo
 import com.tord.Tag
+import com.tord.auth.Role
+import com.tord.auth.User
+import com.tord.auth.UserRole
 
 class BootStrap {
 
@@ -12,6 +15,18 @@ class BootStrap {
 			pt.addToTags(tag);
 			pt.save();
 		}
+		
+		def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
+		def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
+  
+		def testUser = new User(username: 'me', password: 'password')
+		testUser.save(flush: true)
+  
+		UserRole.create testUser, adminRole, true
+  
+		assert User.count() == 1
+		assert Role.count() == 2
+		assert UserRole.count() == 1
 		
     }
     def destroy = {
